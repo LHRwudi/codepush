@@ -19,6 +19,10 @@ var AppError = require('./core/app-error');
 var log4js = require('log4js');
 var log = log4js.getLogger("cps:app");
 var app = express();
+
+var cors = require('cors')
+app.use(cors()); 
+
 app.use(helmet());
 app.disable('x-powered-by');
 // view engine setup
